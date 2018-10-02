@@ -1,0 +1,224 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
+		<title>!Kids Join-Us Page!</title>
+		
+		<style type="text/css">
+			#bg {
+				background-image:url(images/main_bg.jpg)
+			}	
+			
+			td.big{
+				text-align:center;
+				padding:25px;
+				border-top-style:none;
+				border-bottom-style:solid;
+				border-right-style:none;
+				border-left-style:none;
+				border-radius:20px;	
+			}
+			
+			td.small{
+				padding:5px;
+				border-top-style:none;
+				border-bottom-style:none;
+				border-right-style:none;
+				border-left-style:none;
+			}
+			
+			table.big{
+				margin-top:50px;
+				box-shadow:20px 20px 0px green;
+				padding:20px;
+			}
+			
+			table{
+				margin:20px;
+			}
+			
+			table.small {
+				
+				border-top-style:none;
+				border-bottom-style:none;
+				border-right-style:none;
+				border-left-style:none;
+			}
+			
+			input {
+				border-color:green;
+				
+				border-top-style:none;
+				border-right-style:none;
+				border-left-style:none;
+				border-bottom-style:dotted;
+				
+				border-radius:5px;
+				padding:5px;
+				font-family:"arial";
+			}
+			
+			button {
+				box-shadow:2px 2px 0px black;
+				border-radius:5px;
+				margin:10px;
+				width:300px;
+				height:60px;
+				
+				background-color:green;
+			}
+		</style>
+	</head>
+	
+	<body id=bg>
+	<script language = 'Javascript'>
+	
+		function id_check(){
+			var id = document.mobile.uid.value;
+			if(id.length < 5 || id.length > 11) { 
+				window.alert('ID는 6글자 이상, 10글자 이하로 입력해주세요');
+			}
+			else if(id.match(/[^0-9a-zA-Z_]/) != null){
+				window.alert('아이디는 공백없이 입력해주세요 \n\n(영문, 숫자, _사용가능)');
+			}
+			else{
+				window.open('id_check.php?id=' + id, 'IDCHECK', 'width=450, height=180, scrollbars = yes');
+			}
+		}
+		
+		function go_zip(){
+				window.open('zipcode.php', 'ZIP', 'windth = 470 , height =170, scrollbars=yes');
+		}
+	</script>
+	
+	
+	<form action = './register.php' method='post' name='mobile' >
+		<table border=3 width=900 align=center class=big bgcolor=white >
+			<tr>
+				<td class=small>
+					<table width=600 align=center bgcolor=white >
+						<tr>
+							<td class=big bgcolor=#CC3D3D>
+								<font size=5 color=white face="맑은 고딕"><b>★ Kid's Join-us Page ★</b></font>
+							</td>
+						</tr>
+
+						<tr>
+							<td class=big >	
+								<table border=1 width=450 class=small align=center>
+									<tr>
+										<td class=small width=30% align=right>
+											<font face="맑은 고딕" color=green><b>*Id</b></font>
+										</td>
+										<td class=small>
+											<input type=text size=15 maxlength=30 name='uid'>
+											&nbsp;
+											<font face="맑은 고딕" size='2'>
+												[<a href='javascript:id_check()'> Id 중복검사 </a>]
+											</font>
+										</td>
+									</tr>
+						
+									<tr>
+										<td class=small width=30% align=right>
+											<font face="맑은 고딕" color=green><b>*PassWord</b></font>
+										</td>
+										<td class=small>
+										<input type=password size=30 maxlength=30 name='upass1'>
+										</td>				
+									</tr>
+						
+									<tr>
+										<td class=small width=30% align=right>
+											<font face="맑은 고딕" color=green><b>*PW Ok?</b></font>
+										</td>
+										<td class=small>
+											<input type=password size=30 maxlength=30 name='upass2'>
+										</td>				
+									</tr>
+
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td class=big>
+								<table border=1 width=450 class=small align=center>
+									<tr>
+										<td class=small width=30% align=right>
+										<font face="맑은 고딕" color=green><b>*Name(실명)</b></font>
+										</td>
+										<td class=small>
+											<input type=text size=30 maxlength=30 name='uname'>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class=small width=30% align=right>
+											<font face="맑은 고딕" color=green><b>*birthdate</b></font>
+										</td>
+										<td class=small>
+											<input type=date size=30 maxlength=30 name='birthdate'>
+
+										</td>				
+									</tr>
+									
+									<tr>
+										<td class=small width=30% align=right>
+											<font face="맑은 고딕" color=green><b>*e-mail</b></font>
+	
+										</td>
+										<td class=small>
+											<input type=email size=30 maxlength=30 name='email'>
+										</td>				
+									</tr>
+									
+									<tr>
+										<td class=small width=30% align=right>
+											<font face="맑은 고딕" color=green><b>*PhoneNumber</b></font>
+										</td>
+										<td class=small>
+											<select name='p1'>
+												<option value="010" selected> 010 </option>
+												<option value="011"> 011 </option>
+											</select>
+											&nbsp; - &nbsp;
+											<input type=text size=6 maxlength=10 name='p2'>
+											&nbsp; - &nbsp;
+											<input type=text size=6 maxlength=10 name='p3'>
+										</td>				
+									</tr>
+									
+									<tr>
+										<td class=small width=30% align=right>
+										<font face="맑은 고딕" color=green><b>address</b></font>
+										</td>
+										<td class=small>
+											<input type = 'text ' size = '15' name = 'zip' readonly = 'readonly'>
+											<font size = '2' face="맑은 고딕">[<a href = 'javascript:go_zip()'>우편번호 검색</a>]</font><br>
+											<input type = 'text' size= '30' name = 'addr1' readonly = 'readonly'></br>
+											<input type = 'text' size= '30' name = 'addr2'>
+										</td>
+									
+									</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td class=big>
+					<button type='submit' >
+					<font size=5 face="맑은 고딕" color=white>
+					<b>Go Log-In Page!</b>
+					</font>
+					</button>	
+				</td>
+			</tr>
+		</form>
+</table>
+</td>
+</td>
+</table>
+</body>
+
+</html>

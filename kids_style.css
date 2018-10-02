@@ -1,0 +1,79 @@
+﻿<style type="text/css">
+	/*
+		파일명 : kids_style.css
+		작성자 : 주효진
+		파일 내용 : kid 채널에 전체적으로 들어가는 디자인부분.
+	*/
+	#bg {
+		background-image:url(images/main_bg.jpg)
+		
+	}
+	table{
+		margin-top:10px;
+	
+		border-bottom-style:none;
+		border-top-style:none;
+		border-left-style:none;
+		border-right-style:none;
+	}
+	table.big{
+		margin-top:100px;
+		padding:10px;
+		box-shadow:20px 20px 0px green;
+		border-radius:0px;
+		border-style:solid;
+		
+	}
+	table.mini{
+		border-radius:100px;
+		border:11px dotted red;
+		box-shadow : 5px 5px 0px lightgray;
+	}
+	td.middle{
+		border:3px dotted red;
+		
+		border-top-style:none;
+		border-left-style:none;
+		border-right-style:none;
+		
+		text-color:black;
+	}
+	td {
+		border-bottom-style:none;
+		border-top-style:none;
+		border-left-style:none;
+		border-right-style:none;
+		
+		text-align:center;
+		
+		font-family:"Eras Bold ITC";
+		font-size:70px;	
+	}
+	td.title{
+		font-family:"arial";
+		font-size:40px;
+	}
+	td.gameName{
+		font-family:"맑은 고딕";
+		font-size:15px;
+	}
+	
+	a{
+		text-decoration:none;
+		color:black;
+	}
+	
+	a:hover {
+		text-decoration:underline;
+		color:red;
+	}
+	a.title {
+		color:black;
+		text-decoration:none;
+	}
+	a.title:hover {
+		color:black;
+		text-decoration:none;		
+	}
+	
+</style>

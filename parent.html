@@ -1,0 +1,95 @@
+<head>
+<title>! parents Page !</title>
+<?
+/*
+	작성자 : 주효진
+	파일명 : parent.html
+	파일 내용 : parent페이지의 첫 부분.
+*/
+?>
+
+<?
+	// 쿠키를 받아 올 부분 (ID 값)
+	$userid = $_COOKIE['UserId']; 
+	// 쿠키(이름)
+	$name = $_COOKIE['UserName'];
+?>
+
+
+<link href="style.css" rel="stylesheet" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="simpleBanner.css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.mㅇin.js"></script>
+<script type="text/javascript" src="simpleBanner.js"></script>
+</head>
+<body id="bg">
+<table border=3 width=1300 height=750 align=center class=big bgcolor=white>
+<tr height=75>
+	<td>
+	<table width=280 height=70 class=mini align=center>
+		<tr>
+			<td class=title>
+				<a href='http://localhost/parent.html'>
+					parents
+				</a>
+			</td>
+		</tr>
+	</table>
+	</td>
+</tr>
+
+<tr height=150 >
+	<td class=middle>
+	<table border=1 width=100% height=50% align=center>
+	<tr>
+		<td class=adult width=20%>
+		<a href="http://localhost/kidsGame.html">Movie<br>reservation</a>
+		</td>
+		
+		<td class=adult width=20%>
+		<a href="http://localhost/kidsCartoon.html">Restaurant<br>reservation</a>
+		</td>
+		
+		<td class=adult width=20%>
+		<a href="http://localhost/gift_to_children.php?cpage=1&arrange=1">Gift<br>to Childern</a>
+		</td>
+		
+		<td class=adult width=20%>
+		<a href="http://localhost/check_kidsLetter.php?cpage=1&arrange=1">Letter<br>of kids</a>
+		</td>
+		
+		<td class=adult width=20%>
+			<a href='http://localhost/parent_myPage.php?arrange=1&page=1'> MyPage </a>
+		</td>
+		
+	</tr>
+	<tr height=30 align=left>
+			<td align = 'right' class=emptyboard colspan=5>
+			<?
+			echo("
+				<font color=green face='맑은 고딕'> <b> $name </b> 님 반갑습니다 </font>
+				&nbsp;
+				[<a href = './logout.php'>로그아웃 </a>]
+				&nbsp;
+				[<a href = './myPage.html'>마이페이지 </a>]
+			");
+			?>
+			</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+
+<tr height=460 width=1200 align=center>
+	<td align=center>
+		<div class="simple_banner_wrap" style="height:100%;width:100%;">
+	<ul>
+		<li style="background-image:url(images/home.jpg);"></li>
+		<li style="background-image:url(images/house.jpg);"></li>
+		<li style="background-image:url(images/snow.jpg);"><br><br><font color=white>MerryChristmas!</font></li>
+	</ul>
+</div>
+	</td>
+</tr>
+</table>
+
+</body>

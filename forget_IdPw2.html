@@ -1,0 +1,146 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
+		<title>forget_Id/Pw</title>
+
+		<style type="text/css">
+
+			#bg {
+				background-image:url(images/main_bg.jpg)
+				
+			}
+			table {
+				margin-top:50px;
+				border : thick solid green;
+				border-radius:10px;
+				box-shadow: 10px 10px 0px red;		
+			}
+			table.mini {
+				margin-top:0px;
+				border-style:none;
+				border-radius:0px;
+				box-shadow:0px 0px 0px ;
+			}
+			td{
+				border-bottom-style:none;
+				border-left-style:none;
+				border-top-style:none;		
+				border-right-style:none;
+			}
+			td.pw{
+				border-bottom-style:solid;
+				border-left-style:solid;
+				border-top-style:none;		
+				border-right-style:none;
+				border-color:green;
+			}
+			td.mini{
+				
+				padding:20px;
+			}
+
+			input {
+				border-color:green;
+				
+				border-top-style:none;
+				border-right-style:none;
+				border-left-style:none;
+				border-bottom-style:dotted;
+				
+				border-radius:5px;
+				padding:5px;
+				font-family:"arial";
+			}
+			button {
+				box-shadow:2px 2px 0px black;
+				border-radius:5px;
+				margin:10px;
+				width:250px;
+				height:60px;
+				
+				background-color:green;
+			}
+			a{
+				color:gray;
+				text-decoration:none;
+			}
+			a:hover {
+				color:red;
+				text-decoration:underline;
+				
+			}
+			
+			#bank_radio2_box {display:none;}
+		</style>
+		
+
+	</head>
+
+	<body id="bg">
+	
+		<table align=center border=1 height=500 width=700 bgcolor=white>
+		
+			<tr height=80>
+				<td width=50% >
+					<center>
+					<a href='./forget_IdPw.html'>
+					<font face="맑은 고딕"><b>▶ ID를 분실하셨다면? ◀ </b></font>
+					</a>
+					</center>
+				</td>
+				<td class=pw>
+					<center>	
+					<font face="맑은 고딕" size=4> ▶ PW를 분실하셨다면? ◀ </font>
+					</center>
+				</td>
+			</tr>
+<tr>
+	<td colspan=2>
+	<table align=center class=mini width=80%>
+	<form method = 'post' action = './forget_IdPw2.php' onsubmit =
+		"if(!this.uid.value || !this.uname.value || !this.email.value){
+			return false;
+		}"> 
+	<tr>
+		<td class=mini align=right>
+		<font face="맑은 고딕" color=green><b>ID</b></font>
+		</td>
+		<td class=mini>
+			<input type=text size=30 maxlength=20 name ='uid'>
+		</td>
+	</tr>
+		
+	<tr>
+		<td class=mini align=right>
+		<font face="맑은 고딕" color=green><b>Name(실명)</b></font>
+		</td>
+		<td class=mini>
+			<input type=text size=30 maxlength=20 name=uname>
+		</td>
+	</tr>
+	<tr>
+		<td class=mini align=right>
+		<font face='맑은 고딕' color=green><b>Birthdate</b></font>
+		</td>
+		<td class='mini'>
+			<input type=date size=30 maxlength=20 name=birthdate>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan=2 class=mini align=center>
+			<button type=submit >
+				<font size=5 face="맑은 고딕" color=white>
+				<b>Password 찾기</b>
+				</font>
+		</td>
+	</tr>
+	</form>
+	</table>
+	</td>
+	
+</tr>
+</table>
+</body>
+</html>

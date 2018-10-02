@@ -1,0 +1,119 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
+		<title>forget_Id/Pw</title>
+
+		<style type="text/css">
+
+
+			table {
+				margin-top:50px;
+				border : thick solid green;
+				border-radius:10px;
+				box-shadow: 10px 10px 0px red;		
+			}
+			table.mini {
+				margin-top:0px;
+				border-style:none;
+				border-radius:0px;
+				box-shadow:0px 0px 0px ;
+			}
+			td{
+				border-bottom-style:none;
+				border-left-style:none;
+				border-top-style:none;		
+				border-right-style:none;
+			}
+			td.pw{
+				border-bottom-style:solid;
+				border-left-style:solid;
+				border-top-style:none;		
+				border-right-style:none;
+				border-color:green;
+			}
+			td.mini{
+				
+				padding:20px;
+			}
+			
+			input {
+				border-color:green;
+				
+				border-top-style:none;
+				border-right-style:none;
+				border-left-style:none;
+				border-bottom-style:dotted;
+				
+				border-radius:5px;
+				padding:5px;
+				font-family:"arial";
+			}
+			button {
+				box-shadow:2px 2px 0px black;
+				border-radius:5px;
+				margin:10px;
+				width:120px;
+				height:50px;
+				
+				background-color:green;
+			}
+			a{
+				color:gray;
+				text-decoration:none;
+			}
+			a:hover {
+				color:red;
+				text-decoration:underline;
+				
+			}
+			
+			#radio2_box {display:none;}
+		</style>
+		
+
+	</head>
+
+	<body id="bg">
+
+		<table align=center border=1 height=250 width=550 bgcolor=white>
+			<tr height=80>
+				<td width=50% >
+					<center>
+					<font face="맑은 고딕" size=4><b>▶ 새로운 Email 입력 ◀ </b></font>
+					</center>
+				</td>		
+			</tr>
+<tr>
+	<td colspan=2>
+	<table align=center class=mini width=80%>
+	<tr>
+
+			<center>
+			<form method = 'post' action = './ChangeEmail.php'>
+	
+				<font face="맑은 고딕" color=green><b>New E-mail</b></font> &nbsp;
+				<input type=text size=30 maxlength=20 name='newEmail'>
+				<br> <br> <br>
+		
+				
+				<button type='submit' >
+				<font face="맑은 고딕" color=white>
+				<b>확인</b>
+				</font>
+				
+			</center>
+			</form>
+
+	
+	</tr>
+	
+	
+
+	</table>
+	</td>
+	
+</tr>
+</table>
+</body>
+</html>

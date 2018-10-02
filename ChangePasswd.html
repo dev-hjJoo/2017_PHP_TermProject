@@ -1,0 +1,156 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+		<title>Change Password</title>
+
+		<style type="text/css">
+
+			#bg {
+				background-image:url(images/main_bg.jpg)
+				
+			}	
+			td.big{
+				text-align:center;
+				padding:25px;
+				border-top-style:none;
+				border-bottom-style:solid;
+				border-right-style:none;
+				border-left-style:none;
+				border-radius:20px;
+			}
+			td.small{
+				padding:5px;
+				border-top-style:none;
+				border-bottom-style:none;
+				border-right-style:none;
+				border-left-style:none;
+			}
+			table.big{
+				margin-top:200px;
+				box-shadow:20px 20px 0px green;
+				padding:20px;
+			}
+			table{
+				margin:20px;
+			}
+			
+			input {
+				border-color:green;
+				
+				border-top-style:none;
+				border-right-style:none;
+				border-left-style:none;
+				border-bottom-style:dotted;
+				
+				border-radius:5px;
+				padding:5px;
+				font-family:"arial";
+			}
+			
+			button {
+				margin:10px;
+				width:100px;
+				height:40px;
+				
+				background-color:orange;
+				box-shadow:5px 5px 0px gray;
+				border-radius:5px;
+			}
+
+		</style>
+	</head>
+	
+		
+		
+		<table border=3 width=900 align=center class=big bgcolor=white>
+		<tr>
+		<td class=small>
+		
+		<form action = './ChangePasswd.php' method = 'post'>
+		<table width=600 align=center bgcolor=white >
+			
+			<tr>
+				<td class=big width=600 bgcolor=#CC3D3D colspan=2>
+				
+				<font size=5 color=white face="맑은 고딕"><b>★비밀번호 변경 ★</b></font>
+				</td>
+			</tr>
+			
+		
+			<tr align=center>
+				<td  class=small>
+				<br><br>
+					<font face="맑은 고딕" color=green>현재 비밀번호 </font>
+				</td>
+				<td>
+					<input type=password size=30 maxlength=30 name='initPass'>
+				</td>
+			
+			</tr>
+
+			<br>
+			
+			<tr align=center>
+				<td  class=small>
+				<br><br>
+					<font face="맑은 고딕" color=green>새 비밀번호</font>
+				</td>
+				<td  class=small>
+					<input type=password size=30 maxlength=30 name='newPass1'>
+				</td>
+			
+			</tr>
+			
+			<tr align=center>
+				<td  class=small>
+				<br><br>
+					<font face="맑은 고딕" color=green>새 비밀번호 확인</font>
+				<br><br>
+				</td>
+				<td  class=small>
+					<input type=password size=30 maxlength=30 name='newPass2'>
+				</td>
+			
+			</tr>
+			
+			
+			<tr>
+				<td  class=small align=center colspan=2>
+				
+					<button type="submit" align= "right">
+					<a href = './ChangePasswd.php'>
+					<font size=3 color=white face="맑은 고딕">
+					<ff><b>변경</b></ff>
+					</font>
+					</a>
+					</button>
+			
+					&nbsp;
+				
+		</form>	
+					<button type = "reset" align= "left">
+					<font size=3 color=white face="맑은 고딕">
+					<b>지우기</b>
+					</font>
+					</button>
+					
+					<a href = './myPage.html'> [돌아가기] </a>	
+				
+				</td>
+			</tr>
+
+		
+			<tr>
+			
+			</tr>
+
+
+
+		</table>
+		</td>
+		</tr>
+		</table>
+		
+
+	</body>
+</html>

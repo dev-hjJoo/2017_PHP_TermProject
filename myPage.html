@@ -1,0 +1,118 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+		<title>My Page</title>
+		<style type="text/css">
+			#bg {
+				background-image:url(images/main_bg.jpg)
+				
+			}	
+			
+			td.big{
+				text-align:center;
+				padding:25px;
+				border-top-style:none;
+				border-bottom-style:solid;
+				border-right-style:none;
+				border-left-style:none;
+				border-radius:20px;
+			}
+			
+			td.small{
+				padding:5px;
+				border-top-style:none;
+				border-bottom-style:none;
+				border-right-style:none;
+				border-left-style:none;
+			}
+			
+			table.big{
+				margin-top:200px;
+				box-shadow:20px 20px 0px green;
+				padding:20px;
+			}
+			
+			table{
+				margin:20px;
+			}
+		
+			input {
+				border-color:green;
+				border-style:dotted;
+				border-radius:5px;
+				padding:10px;
+				font-family:"arial";
+			}
+			
+			button {
+				margin:10px;
+				width:250px;
+				height:70px;
+				
+				background-color:orange;
+				box-shadow:5px 5px 0px gray;
+				border-radius:5px;
+			}
+			
+			button:hover{
+				text-decoration:underline;
+			}
+
+		</style>
+	</head>
+	<body id=bg>
+		<table border=3 width=900 align=center class=big bgcolor=white>
+		<tr>
+		<td class=small>
+		<table width=600 align=center bgcolor=white >
+			<tr>
+				<td align=right>
+					<a href='selectChannel.php'>[돌아가기]</a>
+				</td>
+			</tr>
+			
+			<tr>
+			<td class=big width=600 bgcolor=#CC3D3D>
+			<font size=5 color=white face="맑은 고딕"><b>★ 회원 정보 관리 ★</b></font>
+			</td>
+			</tr>
+		
+			<tr>
+				<td align=center>
+				<br><br>
+				<button onClick="location.href='http://localhost/ChangeData.html'">
+					<font size=4 color=white face="맑은 고딕">
+					<ff><b>개인정보 수정</b></ff>
+					</font>
+				</button>
+				<br><br>
+				<button onClick="location.href='http://localhost/ChangePasswd.html'">
+					<font size=4 color=white face="맑은 고딕">
+					<ff><b>비밀번호 변경</b></ff>
+					</font>
+				</button>
+				<br><br>
+				<button onClick="location.href='http://localhost/AllDelete.html'">
+					<font size=4 color=white face="맑은 고딕">
+					<ff><b>회원탈퇴</b></ff>
+					</font>
+				</button>
+				<br><br>
+				</td>
+			
+			</tr>
+
+		
+			<tr>
+			
+			</tr>
+
+
+
+		</table>
+		</td>
+		</tr>
+		</table>
+
+	</body>
+</html>

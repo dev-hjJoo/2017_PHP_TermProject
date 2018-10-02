@@ -1,0 +1,135 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
+	<title>!Log-In Page!</title>
+
+
+	
+	<style type="text/css">
+
+		#bg {
+			background-image:url(images/main_bg.jpg)
+		
+		}	
+		td.big{
+			margin:10px;
+			text-align:center;
+			padding:25px;
+			border-top-style:none;
+			border-bottom-style:solid;
+			border-right-style:none;
+			border-left-style:none;
+			border-radius:20px;
+		}
+		td.small{
+			margin:10px;
+			padding:10px;
+			border-top-style:none;
+			border-bottom-style:none;
+			border-right-style:none;
+			border-left-style:none;
+		}
+		table.big{
+			margin-top:200px;
+			box-shadow:20px 20px 0px green;
+			padding:20px;
+		}
+		table{
+			margin:20px;
+		}
+		table.small {
+		
+			border-top-style:none;
+			border-bottom-style:none;
+			border-right-style:none;
+			border-left-style:none;
+		}
+		input {
+			border-color:green;
+			border-style:dotted;
+			border-radius:5px;
+			padding:10px;
+			font-family:"arial";
+		}
+	
+		button {
+			box-shadow:2px 2px 0px black;
+			border-radius:5px;
+			margin:10px;
+			width:250px;
+			height:60px;
+		
+			background-color:green;
+		}
+	
+		a{
+			color:gray;
+			text-decoration:none;
+		}
+		a:hover {
+			text-decoration:underline;
+			color:orange;
+		}
+	
+	</style>
+	</head>
+	
+	<body id=bg>
+
+		<table border=3 width=900 align=center class=big bgcolor=white>
+			<tr>
+				<td class=small>
+				<form method = 'POST' action = './login.php' onsubmit=
+				'if(!this.uid.value || !this.upass.value){
+					return false;
+				}'>
+				<table width=600 align=center bgcolor=white >
+					<tr>
+						<td class=big bgcolor=#CC3D3D>
+							<font size=5 color=white face="맑은 고딕"><b>★ Log-in Page ★</b></font>
+						</td>
+					</tr>
+
+					<tr>
+						<td class=big >	
+							<table border=1 width=400 class=small align=center>
+								<tr>
+									<td class=small width=30% align=right>
+										<font face="맑은 고딕" color=green><b>Id</b></font>
+									</td>
+									<td class=small>
+									<input type=text size=30 maxlength=30 name='uid'>
+									</td>
+									<td rowspan='2' class=small >
+										<input type =submit style='height:100px; width:100px' value='로그인'>
+									</td>
+								</tr>
+								<tr>
+									<td class=small width=30% align=right>
+										<font face="맑은 고딕" color=green><b>PassWord</b></font>
+									</td>
+									<td class=small>
+										<input type=password size=30 maxlength=30 name ='upass'>
+									</td>		
+								</tr>
+								
+							</form>
+							</table>
+							<a href='forget_IdPw.html'>
+								<font face="맑은 고딕"><b>* 혹시 ID/PW를 잊어버리셨나요?</b></font>
+							</a>
+							<br>
+		
+						</td>
+					</tr>
+
+
+				</table>
+				</td></tr></table>
+				
+
+</body>
+	
+	
+</html>

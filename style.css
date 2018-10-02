@@ -1,0 +1,120 @@
+﻿/*
+		파일명 : style.css
+		작성자 : 주효진
+		파일 역할 :  전체적인 html에 들어가는 style을 조정한다.
+*/
+
+
+	#bg {
+		background-image:url(images/main_bg.jpg)
+		
+	}
+	table.big{
+		margin-top:100px;
+		box-shadow:20px 20px 0px green;
+		padding:20px;
+		border-radius:0px;
+		border-style:solid;
+		
+	}
+	table.mini{
+	
+		border-radius:100px;
+		border:11px dotted red;
+		box-shadow : 5px 5px 0px lightgray;
+	}
+	table {
+		
+		border-top-style:none;
+		border-bottom-style:none;
+		border-left-style:none;
+		border-right-style:none;
+		
+	}
+	table.board {
+
+		border-top-style:none;
+		border-bottom-style:none;
+		border-left-style:none;
+		border-right-style:none;
+	}
+	input {
+		margin-left:30px;
+	}
+	textarea {
+		margin-left:30px;
+	}
+	
+	td.inputboard {
+		border:7px dotted red;
+		
+		border-top-style:none;
+		border-bottom-style:none;
+		border-right-style:none;
+		
+		margin-left:20px;
+		
+		text-align:left;
+		font-size:15px;
+	}
+	td.board {
+		border:2px dotted lightgray;
+		
+		font-size:15px;
+	}
+	td.emptyboard {
+		border-top-style:none;
+		border-bottom-style:none;
+		border-left-style:none;
+		border-right-style:none;
+		
+		font-size:15px;
+	}
+	
+	td.middle{
+		border:7px dotted red;
+		
+		border-top-style:none;
+		border-left-style:none;
+		border-right-style:none;
+	}
+	td {
+		border-top-style:none;
+		border-bottom-style:none;
+		border-left-style:none;
+		border-right-style:none;
+		text-align:center;
+		
+		font-family:"Eras Bold ITC";
+		font-size:70px;	
+		font-style:bold;	
+	}
+	
+	td.adult {
+		border-top-style:none;
+		border-bottom-style:none;
+		border-left-style:none;
+		border-right-style:none;
+		text-align:center;
+		
+		font-family:"Eras Bold ITC";
+		font-size:35px;	
+		font-style:bold;	
+	}
+	td.title{
+		font-family:"arial";
+		font-size:40px;
+	}
+	
+	a{
+		text-decoration:none;
+		color:black;
+	}
+	
+	a:hover {
+		text-decoration:none;
+		color:red;
+	}
+	
+	
+	

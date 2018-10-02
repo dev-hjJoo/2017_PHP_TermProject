@@ -1,0 +1,93 @@
+<head>
+<title>Merry-Christmas!</title>
+<?
+/*
+		작성자 : 주효진
+		파일명 : mainPage.html
+		파일 내용 : 최초에 나타나는 mainPage_ music off version
+*/
+?>
+
+
+<style type="text/css">
+
+	table {
+		margin-top:200px;
+		box-shadow: 20px 20px 0px orange;
+		
+	}
+	#bg {
+		background-image:url(images/main_bg.jpg)
+		
+	}
+	input.img_button {
+        background: url(images/button_musicOff.jpg) no-repeat;
+        border: none;
+        width: 145px;
+        height: 51px;
+        cursor: pointer;
+      }
+	button {
+		margin:10px;
+		width:250px;
+		height:70px;
+		
+		background-color:orange;
+		box-shadow:5px 5px 0px gray;
+		border-radius:5px;
+	}
+	button:hover{
+		text-decoration:underline;
+	}
+	td {
+		border-style:none;
+		padding:30px;
+	}
+	a{
+		color:gray;
+		text-decoration:none;
+	}
+	a:hover {
+		text-decoration:underline;
+		color:orange;
+	}
+	f{
+		font-size:60pt;
+	}
+	ff{
+		font-family:"맑은 고딕";
+	}
+</style>
+</head>
+
+<body id="bg">
+<table border=1 width=900 align=center bgcolor=white >
+<tr>
+	<td align=right >
+		<input type="button" class="img_button" onClick="location.href='http://localhost/mainPage.html'">
+	</td>
+</tr>
+
+<tr>
+	<td align=center>
+	<f><ff>Merry Christmas!</ff></f>
+	</td>
+</tr>
+
+<tr>
+	<td align=center>
+	<button onClick="location.href='http://localhost/logIn.html'">
+		<font size=5>
+		<ff><b>log-in</b></ff>
+		</font>
+	</button>
+	<br>
+	<button onClick="location.href='http://localhost/joinUs.html'">
+		<font size=5>
+		<ff><b>Join us?</b></ff>
+		</font>
+	</button>
+	</td>
+</tr>
+</table>
+</body>

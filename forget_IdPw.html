@@ -1,0 +1,197 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
+		<title>forget_Id/Pw</title>
+
+		<style type="text/css">
+
+			#bg {
+				background-image:url(images/main_bg.jpg)
+				
+			}
+			table {
+				margin-top:50px;
+				border : thick solid green;
+				border-radius:10px;
+				box-shadow: 10px 10px 0px red;		
+			}
+			table.mini {
+				margin-top:0px;
+				border-style:none;
+				border-radius:0px;
+				box-shadow:0px 0px 0px ;
+			}
+			td{
+				border-bottom-style:none;
+				border-left-style:none;
+				border-top-style:none;		
+				border-right-style:none;
+			}
+			td.pw{
+				border-bottom-style:solid;
+				border-left-style:solid;
+				border-top-style:none;		
+				border-right-style:none;
+				border-color:green;
+			}
+			td.mini{
+				
+				padding:20px;
+			}
+	
+			input {
+				border-color:green;
+				
+				border-top-style:none;
+				border-right-style:none;
+				border-left-style:none;
+				border-bottom-style:dotted;
+				
+				border-radius:5px;
+				padding:5px;
+				font-family:"arial";
+			}
+			button {
+				box-shadow:2px 2px 0px black;
+				border-radius:5px;
+				margin:10px;
+				width:250px;
+				height:60px;
+				
+				background-color:green;
+			}
+			a{
+				color:gray;
+				text-decoration:none;
+			}
+			a:hover {
+				color:red;
+				text-decoration:underline;
+				
+			}
+			
+			#radio2_box {display:none;}
+		</style>
+		
+
+	</head>
+
+	<body id="bg">
+	
+		<script LANGUAGE="JavaScript">
+
+			function radio_oc( e ){
+			var fm = document.f1; 
+				if( fm.s_radio[0].checked == true ){
+				radio1_box.style.display = "block";
+				radio2_box.style.display = "none";
+				
+				}else if( fm.s_radio[1].checked == true ){
+				radio1_box.style.display = "none";
+				radio2_box.style.display = "block";
+				}
+			}
+
+		</script>
+
+		<table align=center border=1 height=500 width=700 bgcolor=white>
+			<tr height=80>
+				<td width=50% >
+					<center>
+					<font face="맑은 고딕" size=4><b>▶ ID를 분실하셨다면? ◀ </b></font>
+					</center>
+				</td>
+				<td class=pw>
+					<center>
+					<a href='./forget_IdPw2.html'>
+					<font face="맑은 고딕"> ▶ PW를 분실하셨다면? ◀ </font>
+					</a>
+					</center>
+				</td>
+			</tr>
+<tr>
+	<td colspan=2>
+	<table align=center class=mini width=80%>
+	<tr>
+		<td align=center colspan=2 class=mini>
+		
+		<form name=f1>
+			<input type="radio" class="radio1" name="s_radio" value="phoneNumber" onclick='radio_oc(this)' checked>
+				<font face="맑은 고딕">전화번호로 찾기</font>
+				
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			<input type="radio" class="radio2" name="s_radio" value="email" onclick='radio_oc(this)'>    
+
+
+				<font face="맑은 고딕">생년월일로 찾기</font>
+		</form>
+		
+		
+		</td>
+		<div id="radio1_box">
+			<center>
+			<form method = 'post' action = './forget_IdPw_1.php' onsubmit =
+			"if(!this.uname.value || !this.mphone.value){
+				return false;
+			}">
+				<font face="맑은 고딕" color=green><b>Name</b></font> &nbsp;
+				<input type=text size=30 maxlength=20 name='uname' >
+				<br> <br> <br>
+
+				<font face="맑은 고딕" color=green><b>PhoneNumber</b></font> &nbsp;
+				
+				<select name='p1'>
+					<option value="010" selected> 010 </option>
+					<option value="011"> 011 </option>
+				</select>
+				&nbsp; - &nbsp;
+				<input type=text size=6 maxlength=10 name='p2'>
+				&nbsp; - &nbsp;
+				<input type=text size=6 maxlength=10 name='p3'>
+				<br> <br> <br>	
+				
+				<button type='submit' >
+				<font size=5 face="맑은 고딕" color=white>
+				<b>ID 찾기</b>
+				</font>
+				
+			</center>
+			</form>
+		</div>
+		
+		<div id="radio2_box">
+			<center>
+			<form method = 'post' action = './forget_IdPw_2.php' onsubmit =
+			"if(!this.uname.value || !this.birthdate.value){
+				return false;
+			}">
+				<font face="맑은 고딕" color=green><b>Name</b></font> &nbsp;
+				<input type=text size=30 maxlength=20 name='uname'>
+				<br> <br> <br>
+
+				<font face="맑은 고딕" color=green><b>Birthdate</b></font> &nbsp;
+				<input type=date size=30 maxlength=20 name='birthdate'>
+				<br> <br> <br>	
+				
+				<button type='submit' >
+				<font size=5 face="맑은 고딕" color=white>
+				<b>ID 찾기</b>
+				</font>
+			</button>
+			</center>
+			</form>
+		</div>
+	</tr>
+	
+	
+
+	</table>
+	</td>
+	
+</tr>
+</table>
+</body>
+</html>

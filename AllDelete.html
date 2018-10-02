@@ -1,0 +1,121 @@
+﻿<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+	<title>Member Leave</title>
+		<style type="text/css">
+			#bg {
+				background-image:url(images/main_bg.jpg)	
+			}	
+			
+			td.big{
+				text-align:center;
+				padding:25px;
+				border-top-style:none;
+				border-bottom-style:solid;
+				border-right-style:none;
+				border-left-style:none;
+				border-radius:20px;
+			}
+			
+			td.small{
+				padding:5px;
+				border-top-style:none;
+				border-bottom-style:none;
+				border-right-style:none;
+				border-left-style:none;
+			}
+			
+			table.big{
+				margin-top:200px;
+				box-shadow:20px 20px 0px green;
+				padding:20px;
+			}
+			
+			table{
+				margin:20px;
+			}
+			
+			input {
+				border-color:green;
+				border-style:dotted;
+				border-radius:5px;
+				padding:10px;
+				font-family:"arial";
+			}
+			
+			button {
+				margin:10px;
+				width:100px;
+				height:40px;
+				
+				background-color:orange;
+				box-shadow:5px 5px 0px gray;
+				border-radius:5px;
+			}
+
+		</style>
+	</head>
+	<body id=bg>
+	
+	<script language = 'Javascript'>
+
+	</script>
+		<form method = 'post' action = './AllDelete.php' name = 'delete'>
+		
+		<table border=3 width=900 align=center class=big bgcolor=white>
+		<tr>
+		<td class=small>
+		<table width=600 align=center bgcolor=white >
+			
+			<tr>
+				<td class=big width=600 bgcolor=#CC3D3D >
+			<font size=5 color=white face="맑은 고딕"><b>★ 회원 탈퇴 ★</b></font>
+			</td>
+			</tr>
+			
+			<tr>
+				
+				<td align=center>
+				<br><br>
+				<font size=3 face="맑은 고딕">1. 사용하고 계신 아이디는 탈퇴할 경우 복구가 불가능합니다</font><br>
+				<font color=gray size=3 face="맑은 고딕">- 탈퇴한 아이디는 복구가 불가하오니 신중하게 선택하시기 바랍니다. </font><br>
+				
+				<br><br>
+				<font size=3 face="맑은 고딕">2. 탈퇴 후 회원정보는 모두 삭제 됩니다.</font><br>
+				<br><br>
+				
+				<font size=3 face="맑은 고딕">3. 탈퇴 후 게시판형 서비스에 등록한 게시물은 전부 자동 삭제됩니다.</font><br>
+				<br><br><br><br>
+				
+				<input type=checkbox name=agree value=agree> <font size=3 face="맑은 고딕"> 모두 동의 하시겠습니까? </font>
+				<br>
+				</td>
+			
+			</tr>
+
+			
+			
+			<tr>
+				<td align=center>	
+					
+					<button align= "right">
+					<font size=3 color=white face="맑은 고딕">
+					<ff><b>탈퇴</b></ff>
+					</font>
+					</button>
+
+				&nbsp;
+
+					<a href = './myPage.html'> [돌아가기] </a>	
+				
+				</td>
+			</tr>
+
+
+		</table>
+		</td>
+		</tr>
+		</table>
+	</form>
+	</body>
+</html>

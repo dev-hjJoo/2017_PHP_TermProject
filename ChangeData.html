@@ -1,0 +1,222 @@
+﻿<?
+$UserId = $_COOKIE['UserId']; 
+$UserName = $_COOKIE['UserName'];
+?>
+<!--만든이 : 정보통신공학과 20163031 차해리-->
+<html>
+	<head>
+		<title>My Persoanl Data</title>
+		<style type="text/css">
+			#bg {
+				background-image:url(images/main_bg.jpg)
+				
+			}	
+			
+			td.big{
+				text-align:center;
+				padding:25px;
+				border-top-style:none;
+				border-bottom-style:solid;
+				border-right-style:none;
+				border-left-style:none;
+				border-radius:20px;
+			}
+			
+			td.small{
+				padding:5px;
+				border-top-style:none;
+				border-bottom-style:none;
+				border-right-style:none;
+				border-left-style:none;
+			}
+			
+			table.big{
+				margin-top:200px;
+				box-shadow:20px 20px 0px green;
+				padding:20px;
+			}
+			
+			table{
+				margin:20px;
+			}
+			
+			input {
+				border-color:green;
+				
+				border-top-style:none;
+				border-right-style:none;
+				border-left-style:none;
+				border-bottom-style:dotted;
+				
+				border-radius:5px;
+				padding:5px;
+				font-family:"arial";
+			}
+			
+			#btn1 {
+				margin:10px;
+				width:60px;
+				height:30px;
+				
+				background-color:orange;
+				box-shadow:5px 5px 0px gray;
+				border-radius:5px;
+			}
+			
+			#btn2 {
+				box-shadow:2px 2px 0px black;
+				border-radius:5px;
+				margin:10px;
+				width:120px;
+				height:50px;
+				
+				background-color:green;
+			}
+
+		</style>
+	</head>
+	<body id=bg>
+	<?
+			$con = mysql_connect("localhost","mobile","mobile");
+			mysql_select_db("mobiledb", $con);
+
+			$query = "Select * 
+					  from member  
+					  where uname = '$UserName'";
+							
+			$result = mysql_query($query, $con);
+			
+			$email = mysql_result($result, 0, "email");
+			
+			$mphone = mysql_result($result, 0, "mphone");
+			
+			$zipcode = mysql_result($result, 0, "zipcode");
+			$addr1 = mysql_result($result, 0, "addr1");
+			$addr2 = mysql_result($result, 0, "addr2");
+	
+		
+	?>
+	
+		<script language = 'Javascript'>
+		function changeEmail(){	
+			window.open('ChangeEmail.html' , 'CHANGEEMAIL', 'width=600, height =330, scrollbars = yes');
+			
+		}
+		
+		function changePhone(){	
+			window.open('ChangePhone.html' , 'CHANGPhone', 'width=600, height =330, scrollbars = yes');
+			
+		}
+		
+		function changeAddress(){	
+			window.open('ChangeAddress.html' , 'CHANGEADDRESS', 'width=600, height =330, scrollbars = yes');
+			
+		}
+
+		function go_zip(){
+			window.open('zipcode.php', 'ZIP', 'windth = 470 , height =170, scrollbars=yes');
+		}
+		</script>
+	
+		<table border=3 width=900 align=center class=big bgcolor=white>
+		<tr>
+		<td class=small>
+		<table width=600 align=center bgcolor=white >
+			<tr>
+				<td class=big width=600 bgcolor=#CC3D3D colspan=2>
+				
+				<font size=5 color=white face="맑은 고딕"><b>★ 개인 정보 수정 ★</b></font>
+				</td>
+			</tr>
+			
+			<table width=600 align=center bgcolor=white >
+			<tr width=200 align=center>
+				<td  class=small align=left>
+					<font face="맑은 고딕" color=green>나의 e-mail</font>
+				</td>
+				<td align=left width=200>
+				    &nbsp;&nbsp;&nbsp;&nbsp;<? echo $email; ?>
+				</td>
+				<td align=right width=200>
+					<button type="submit" align= "right" id="btn1">
+					<a href = 'javascript:changeEmail()'>
+					<font size=3 color=white face="맑은 고딕">
+					<ff><b>수정</b></ff>
+					</font>
+					</a>
+					</button>
+				</td>
+			</tr>
+			</table>
+
+			<table width=600 align=center bgcolor=white >
+		
+			<tr align=center>
+				<td  width=200 class=small align=left>
+					<font face="맑은 고딕" color=green>나의 PhoneNumber</font>
+				</td>
+				<td align=left width=200>
+				    <? echo $mphone;?>
+				</td>
+				<td align=right width=200>
+					<button type="submit" align= "right" id="btn1">
+					<a href = 'javascript:changePhone()'>
+					<font size=3 color=white face="맑은 고딕">
+					<ff><b>수정</b></ff>
+					</font>
+					</a>
+					</button>
+				</td>
+			
+			</tr>
+			</table>
+			
+			<table width=600 align=center bgcolor=white >
+			<tr align=center>
+				<td  class=small align=left>
+					<font face="맑은 고딕" color=green>나의 address</font>
+				</td>
+				<td align=left width=250>
+				 
+				    <? echo ("
+						&nbsp;&nbsp;&nbsp;
+						$zipcode
+						<br>
+						&nbsp;&nbsp;&nbsp;
+						$addr1
+						&nbsp;&nbsp;&nbsp;
+						$addr2");
+					?>
+					
+				</td>
+				<td align=right width=150>
+					<button type="submit" align= "right" id="btn1">
+					<a href = 'javascript:changeAddress()'>
+					<font size=3 color=white face="맑은 고딕">
+					<ff><b>수정</b></ff>
+					</font>
+					</a>
+					</button>
+				</td>
+			
+			</tr>
+			<tr>
+				
+				<td  class=small align=center colspan=3>	
+				<br><br><br><br>
+					<a href = './myPage.html'> [돌아가기] </a>	
+				</td>
+			</tr>
+			
+			</table>
+		
+			<tr>		
+			</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+		
+
+	</body>
+</html>
